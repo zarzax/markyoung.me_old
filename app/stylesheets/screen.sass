@@ -1,0 +1,61 @@
+@import blueprint/reset.sass
+/ @import partials/base.sass
+@import partials/_rounded.sass
+@import blueprint
+@import blueprint/modules/scaffolding.sass
+@import compass/utilities.sass
+
+
+/ Import separate modules.
++blueprint-typography
++blueprint-utilities
++blueprint-debug
++blueprint-interaction
++blueprint-scaffolding
++blueprint-form
+
+/ Variables
+
+/ Start SASSing
+#container
+	+container
+
+#header, #footer
+	+column(24)
+	+rounded(3px)
+	:background-color blue
+	:height 80px
+	
+
+#menu
+	:right 100px
+	+horizontal-list
+
+#sidebar
+	+column(4)
+	:background-color red
+	
+
+#content
+	+column(20, true)
+
+#project
+	+column(19)
+	:border 1px solid black
+	:margin-bottom 10px
+
+#project
+	#name
+		+column(19)
+		:background grey
+		h3
+			+prepend(2)
+			/ :padding-left 20px
+	#image
+		+column(6)
+		img
+			:width 230px
+	#summary
+		+column(13, true)
+
+		
