@@ -1,8 +1,10 @@
 @import blueprint/reset.sass
-/ @import partials/base.sass
-@import partials/_rounded.sass
+@import partials/base.sass
+@import partials/rounded.sass
+@import partials/menu.sass
 @import blueprint
 @import blueprint/modules/scaffolding.sass
+@import blueprint/modules/fancy_type.sass
 @import compass/utilities.sass
 
 
@@ -13,8 +15,11 @@
 +blueprint-interaction
 +blueprint-scaffolding
 +blueprint-form
++fancy-type
 
 / Variables
+!page_background_color = #fff
+!header_background_color = #333
 
 / Start SASSing
 #container
@@ -22,15 +27,17 @@
 
 #header, #footer
 	+column(24)
-	+rounded(3px)
-	:background-color blue
-	:height 80px
+	height: 108px
 	
 
-#menu
-	:right 100px
-	+horizontal-list
-
+#navigation
+	clear: both
+	width: 100%
+	background-color = !header_background_color
+	+rounded(10px)
+	#menu
+		+customnav
+			
 #sidebar
 	+column(4)
 	:background-color red
@@ -52,10 +59,11 @@
 			+prepend(2)
 			/ :padding-left 20px
 	#image
-		+column(6)
+		+column(9)
 		img
-			:width 230px
+			:width 360px
+			:height 133px
 	#summary
-		+column(13, true)
+		+column(10, true)
 
 		

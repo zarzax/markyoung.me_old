@@ -19,16 +19,31 @@
 			<div id="title">
 				<h1><%= @page_title || "Mark Young Portfolio" %></h1>
 			</div>
-			<div id="menu">
-				<ul>
-					<li class="first"><%= link_to "Home", {:controller => "home"} %></li>
-					<li><%= link_to "Portfolio", :controller => "portfolio", :action => "index" %></li>
-					<li class="last"><%= link_to "About", :controller => "about", :action => "index" %></li>
-				</ul>
-			</div>
 		</div>
 		
-
+		<div id="navigation">
+			<div id="menu">
+				<ol>
+					<li class="first">
+						<a title="Go to the home page"href="/home">
+							Home
+							<small>Do Not Pass Go</small>
+						</a>
+					</li>
+					<li>
+						<a title="Go to the Portfolio page"href="/porfolio">
+							Portfolio
+							<small>See My Work</small>						
+					</li>
+					<li class="last">
+						<a title="Go to the About page"href="/about">
+							About
+							<small>About Me</small>	
+						</a>
+					</li>
+				</ol>
+			</div>
+		</div>
 		
 		<div id="sidebar" class="">
 			something
