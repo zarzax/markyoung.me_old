@@ -1,14 +1,14 @@
 @import blueprint/reset.sass
-@import partials/base.sass
-@import partials/rounded.sass
-@import partials/menu.sass
 @import blueprint
 @import blueprint/modules/scaffolding.sass
 @import blueprint/modules/fancy_type.sass
 @import compass/utilities.sass
+@import partials/base.sass
+@import partials/rounded.sass
+//@import partials/menu.sass
 
 
-/ Import separate modules.
+// Import separate modules.
 +blueprint-typography
 +blueprint-utilities
 +blueprint-debug
@@ -17,53 +17,93 @@
 +blueprint-form
 +fancy-type
 
-/ Variables
+// Variables
 !page_background_color = #fff
 !header_background_color = #333
 
-/ Start SASSing
+// Start SASSing
 #container
 	+container
 
 #header, #footer
 	+column(24)
-	height: 108px
-	
+
+#header
+	img
+		height= 18px * 8
+
+#footer
+	:border-top 3px solid #AFAFAF
+	#about
+		+column(8)
+		h3, p
+			:padding 0 20px
+	#social
+		+column(8)
+		+border
+	#contact
+		+column(8,true)
+	#pagebar
+		+column(24,true)
+		+inline-list
+		:background-color #333
+		:text-align center
+		a
+			:font-weight bold
+			:color #AFAFAF
+			:text-decoration none
+			:text-transform uppercase
+			:padding 0 20px
+			:font-size 1em
+			&:hover
+				:color #FFF
 
 #navigation
-	clear: both
-	width: 100%
-	background-color = !header_background_color
-	+rounded(10px)
+	+column(24,true)
+	height= 18px * 3
+	:text-align center
 	#menu
-		+customnav
-			
-#sidebar
-	+column(4)
-	:background-color red
-	
+		:margin 0 252px
+		:border-top 1px dotted #AFAFAF
+		:border-bottom 1px dotted #AFAFAF
+	ul
+		+inline-list	
+		li
+			a
+				:color #AFAFAF
+				:font-weight bold
+				:text-decoration none
+				:text-transform uppercase
+				:padding 0 20px
+				:font-size 1.9em
+				&:hover
+					:color #000000
 
-#content
-	+column(20, true)
+			
+
+#section-horizontal-spacer
+	+column(24,true)
+	:height 18px
+
+#main-content
+	+column(24, true)
 
 #project
 	+column(19)
-	:border 1px solid black
-	:margin-bottom 10px
-
-#project
-	#name
-		+column(19)
-		:background grey
-		h3
-			+prepend(2)
-			/ :padding-left 20px
+	//:border 1px solid black
+	:margin-bottom 18px
+	:height 180px
+	#text
+		+column(10)
+		#name
+			:position relative
+			+prepend(1)
+		#summary	
 	#image
-		+column(9)
+		+column(9, true)
 		img
 			:width 360px
-			:height 133px
-	#summary
-		+column(10, true)
+			:height 180px
+
 
 		

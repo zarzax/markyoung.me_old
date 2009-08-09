@@ -1,14 +1,15 @@
-
 <% for project in @projects -%>
 	<div id="project">
-		<div id="name">
-			<h3><%=h project.name %></h3>
+		<div id="text">
+			<div id="name">
+				<h3><%=h project.name %></h3>
+			</div>
+			<div id="summary">
+				<%=h project.summary %>
+			</div>			
 		</div>
 		<div id="image">
 			<%= image_tag(project.image_url) %>
-		</div>
-		<div id="summary">
-			<%=h project.summary %>
 		</div>
 	</div>
 <% end %>
