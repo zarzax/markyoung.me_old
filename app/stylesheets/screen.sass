@@ -84,26 +84,31 @@
 #section-horizontal-spacer
 	+column(24,true)
 	:height 18px
+	+clearfix
 
 #main-content
 	+column(24, true)
 
-#project
-	+column(19)
-	//:border 1px solid black
-	:margin-bottom 18px
-	:height 180px
-	#text
-		+column(10)
-		#name
-			:position relative
-			+prepend(1)
-		#summary	
-	#image
-		+column(9, true)
-		img
-			:width 360px
-			:height 180px
+
+
+#project-listing
+	+column(24,true)
+	:text-align center
+	#project
+		+rounded(6px)
+		:border 2px solid #DDBBAA
+		:background #FFF5CC
+		:padding 0.7em 1em
+		
+		:display inline-block
+		:float none
+		:margin 1.2em 1em 0 0
+		:vertical-align top
+		:width 250px
+		p
+			:text-align left
+			:font-size 1em
+			:letter-spacing 0.03em
 
 
 		
