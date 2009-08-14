@@ -4,7 +4,7 @@
   <tr>
     <th>Name</th>
     <th>Summary</th>
-    <th>Description</th>
+		<th>Tags</th>
     <th>Image url</th>
   </tr>
 
@@ -12,7 +12,9 @@
   <tr>
     <td><%=h project.name %></td>
     <td><%=h project.summary %></td>
-    <td><%=h project.description %></td>
+		<td><% project.language_list.each do |tag| %>
+			<%=h tag %>
+		<% end %></td>
     <td><%=h project.image_url %></td>
     <td><%= link_to 'Show', project %></td>
     <td><%= link_to 'Edit', edit_project_path(project) %></td>
