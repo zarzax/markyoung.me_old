@@ -2,7 +2,6 @@ class ActsAsTaggableOnMigration < ActiveRecord::Migration
   def self.up
     create_table :tags do |t|
       t.column :name, :string
-      t.column :count, :integer, :default => 0
     end
     
     create_table :taggings do |t|

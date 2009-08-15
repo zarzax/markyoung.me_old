@@ -35,14 +35,13 @@
 #footer
 	:border-top 3px solid #AFAFAF
 	#about
-		+column(8)
+		+column(16)
+		+border
 		h3, p
 			:padding 0 20px
 	#social
-		+column(8)
-		+border
-	#contact
 		+column(8,true)
+
 	#pagebar
 		+column(24,true)
 		+inline-list
@@ -109,6 +108,9 @@
 				:height 180px
 			
 #project-listing
+	.stats
+		ul
+			+inline-list
 	+column(24,true)
 	:text-align center
 	.project
@@ -122,10 +124,20 @@
 		:margin 1.2em 1em 0 0
 		:vertical-align top
 		:width 250px
+		h3
+			:margin 0
+		ul
+			+inline-list
+			.tag
+				:font-size .8em
 		p
 			:text-align left
 			:font-size 1em
 			:letter-spacing 0.03em
 
-
-		
+#tag-cloud
+	:text-align center
+	.tags
+		+tag-cloud(1.5em)
+		+inline-list
+	

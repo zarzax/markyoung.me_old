@@ -1,0 +1,7 @@
+#tag-cloud
+	- if @tags.empty?
+		%p No tags :/
+	- else
+		%ul.tags
+			- tag_cloud(@tags,@levels) do |tag,level|
+				%li(class=level)= h tag
