@@ -1,9 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :projects
-  # map.resources :portfolio
-  
-  # map.connect ':portfolio/:action'
-  # map.connect 'tags/:name', :controller => 'portfolio', :action => 'tags'
 
   # The priority is based upon order of creation: first created -> highest priority.
 
