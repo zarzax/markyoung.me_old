@@ -1,26 +1,24 @@
 class PortfolioController < ApplicationController
   
   def index
-    @projects = Project.find_projects
-    @languages = Project.language_counts
-    @deliverables = Project.deliverable_counts
-    @tags = @languages + @deliverables
-    @levels = ["xxs", "xs", "s", "l", "xl", "xxl"]
+    load_vars
   end
   
   def list
-    @projects = Project.find_projects
-    @languages = Project.language_counts
-    @deliverables = Project.deliverable_counts
-    @tags = @languages + @deliverables
-    @levels = ["xxs", "xs", "s", "l", "xl", "xxl"]
+    load_vars
   end
   
-  def tags
+  def tag
+    load_vars
+    @projects = Project.find_tagged_with(params[:id])
+  end
+  
+private
+  def load_vars
     @projects = Project.find_projects
     @languages = Project.language_counts
-    @deliverables = Project.deliverable_counts
-    @tags = @languages + @deliverables
+    @tags = Project.tag_counts
+    @all_tags = @languages + @tags
     @levels = ["xxs", "xs", "s", "l", "xl", "xxl"]
   end
 

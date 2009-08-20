@@ -9,13 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090814193459) do
+ActiveRecord::Schema.define(:version => 20090820190557) do
 
   create_table "projects", :force => true do |t|
     t.string   "name"
     t.text     "summary"
     t.text     "description"
+    t.string   "link_url"
     t.string   "image_url"
+    t.boolean  "is_featured"
+    t.string   "githubbed"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -34,8 +37,7 @@ ActiveRecord::Schema.define(:version => 20090814193459) do
   add_index "taggings", ["taggable_id", "taggable_type", "context"], :name => "index_taggings_on_taggable_id_and_taggable_type_and_context"
 
   create_table "tags", :force => true do |t|
-    t.string  "name"
-    t.integer "count", :default => 0
+    t.string "name"
   end
 
 end

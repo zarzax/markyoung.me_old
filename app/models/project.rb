@@ -5,7 +5,7 @@ class Project < ActiveRecord::Base
                       :with     => %r{\.(gif|jpg|png)$}i,
                       :message  => 'must be a URL for GIF, JPG, or PNG image.'
   
-  acts_as_taggable_on :languages, :deliverables
+  acts_as_taggable_on :tags, :languages
 
   def self.find_projects
     find(:all, :order => 'name')
