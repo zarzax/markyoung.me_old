@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20090820190557) do
     t.string   "image_url"
     t.boolean  "is_featured"
     t.string   "githubbed"
+    t.string   "permalink"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

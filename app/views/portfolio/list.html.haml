@@ -1,10 +1,4 @@
 #project-listing
-	.stats
-		- Project.language_counts.each do |tag|
-			%ul
-				%li
-					%p= tag.name + "(" + tag.count.to_s + ")" 
-
 	- @projects.each do |project|
 		.project
 			%h3= project.name
@@ -12,3 +6,7 @@
 				- project.language_list.each do |tag|
 					%li.tag= h (tag + "  ")
 			%p= h project.summary
+
+	#social
+		%h3 Projects Tag Cloud: 
+		= render :partial => 'tagcloud'

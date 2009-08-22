@@ -8,6 +8,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :image_url
       t.boolean :is_featured
       t.string :githubbed
+      t.string :permalink
 
       t.timestamps
     end
