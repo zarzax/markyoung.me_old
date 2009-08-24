@@ -1,0 +1,12 @@
+#project-index
+	- @projects.each do |project|
+		.project
+			.text
+				.name
+					%h3= h project.name
+				.summary= h project.summary
+			.image= image_tag(project.image_url)
+
+	#social
+		%h3 Projects Tag Cloud: 
+		= render :partial => 'tagcloud'

@@ -1,0 +1,143 @@
+@import blueprint/reset.sass
+@import blueprint
+@import blueprint/modules/scaffolding.sass
+@import blueprint/modules/fancy_type.sass
+@import compass/utilities.sass
+@import partials/base.sass
+@import partials/rounded.sass
+//@import partials/menu.sass
+
+
+// Import separate modules.
++blueprint-typography
++blueprint-utilities
++blueprint-debug
++blueprint-interaction
++blueprint-scaffolding
++blueprint-form
++fancy-type
+
+// Variables
+!page_background_color = #fff
+!header_background_color = #333
+
+// Start SASSing
+#container
+	+container
+
+#header, #footer
+	+column(24)
+
+#header
+	img
+		height= 18px * 8
+
+#footer
+	:border-top 3px solid #AFAFAF
+	#about
+		+column(16)
+		+border
+		h3, p
+			:padding 0 20px
+	#social
+		+column(8,true)
+
+	#pagebar
+		+column(24,true)
+		+inline-list
+		:background-color #333
+		:text-align center
+		a
+			:font-weight bold
+			:color #AFAFAF
+			:text-decoration none
+			:text-transform uppercase
+			:padding 0 20px
+			:font-size 1em
+			&:hover
+				:color #FFF
+
+#navigation
+	+column(24,true)
+	height= 18px * 3
+	:text-align center
+	#menu
+		:margin 0 252px
+		:border-top 1px dotted #AFAFAF
+		:border-bottom 1px dotted #AFAFAF
+	ul
+		+inline-list	
+		li
+			a
+				:color #AFAFAF
+				:font-weight bold
+				:text-decoration none
+				:text-transform uppercase
+				:padding 0 20px
+				:font-size 1.9em
+				&:hover
+					:color #000000
+
+			
+
+.section-horizontal-spacer
+	+clearfix
+	+column(24,true)
+	:height 18px
+
+#content
+	+column(24, true)
+
+
+#project-index
+	.project
+		+column(24,true)
+		//:border 1px solid black
+		:margin-bottom 18px
+		:height 180px
+		.text
+			+column(10)
+			.name
+				:position relative
+				+prepend(1)
+			.summary	
+		.image
+			+column(9, true)
+			img
+				:width 360px
+				:height 180px
+			
+#project-listing
+	.stats
+		ul
+			+inline-list
+	+column(24,true)
+	:text-align center
+	.project
+		+rounded(6px)
+		:border 2px solid #DDBBAA
+		:background #FFF5CC
+		:padding 0.7em 1em
+		
+		:display inline-block
+		:float none
+		:margin 1.2em 1em 0 0
+		:vertical-align top
+		:width 250px
+		h3
+			:margin 0
+		ul
+			+inline-list
+			.tag
+				:font-size .8em
+		p
+			:text-align left
+			:font-size 1em
+			:letter-spacing 0.03em
+
+#tag-cloud
+	:text-align center
+	.tags
+		+tag-cloud(1.5em)
+		+inline-list
+	

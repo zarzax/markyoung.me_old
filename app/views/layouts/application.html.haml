@@ -1,0 +1,47 @@
+!!! XML
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
+	%head
+		%meta{"http-equiv" =>"Content-type", :content => "text/html;charset=UTF-8"}
+		%title= @page_title || "Mark Young Portfolio"
+		= stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection'
+		= stylesheet_link_tag 'compiled/print.css', :media => 'print'
+		/[if IE]
+			= stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
+	
+	%body
+		
+		#container.showgrid
+			
+			#header
+				= image_tag('logo.png')
+			#navigation
+				#menu
+					%ul
+						%li= link_to "Home", :controller => "home"
+						%li= link_to "Portfolio", :controller => "portfolio"
+						%li= link_to "About", :controller => "about"
+			
+			.section-horizontal-spacer
+			
+			#content
+				= yield :layout
+				
+			.section-horizontal-spacer
+			
+			#footer
+				#about
+					= image_tag('mark-small.jpg')
+					%p I am a software developer specializing in web usability and computer interactivity.
+					%p Phone: 612.803.1717
+					%p Address: 1180 Cushing CIR APT 303, Saint Paul MN 55108
+				
+				/ #social
+				/ 	%h3 Projects Tag Cloud: 
+				/ 	 = render :partial => 'tagcloud'
+					
+				#pagebar
+					%ul
+						%li= link_to "Home", :controller => "home"
+						%li= link_to "Portfolio", :controller => "portfolio"
+						%li= link_to "About", :controller => "about"

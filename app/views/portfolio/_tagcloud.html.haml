@@ -1,0 +1,8 @@
+#tag-cloud
+	- if @tags.empty?
+		%p No tags :/
+	- else
+		%ul.tags
+			- tag_cloud(@all_tags,@levels) do |tag,level|
+				%li(class=level)
+					= link_to tag, :controller => "portfolio", :action => "tag", :id => tag

@@ -1,0 +1,12 @@
+#project-listing
+	- @projects.each do |project|
+		.project
+			%h3= project.name
+			%ul
+				- project.language_list.each do |tag|
+					%li.tag= h (tag + "  ")
+			%p= h project.summary
+
+	#social
+		%h3 Projects Tag Cloud: 
+		= render :partial => 'tagcloud'
