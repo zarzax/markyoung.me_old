@@ -3,7 +3,7 @@ set :repository,  "git@github.com:zarzax/markyoung.me.git"
 
 role :web, "markyoung.me"
 role :app, "markyoung.me"
-role :db, "markyoung.me"
+role :db, "markyoung.me",:primary=>true
 
 set :scm, "git"
 set :user, "mark"
