@@ -1,9 +1,9 @@
 set :application, "markyoung.me"
 set :repository,  "git@github.com:zarzax/markyoung.me.git"
 
-role :web, "maryoung.me"
-role :app, "maryoung.me"
-role :db, "maryoung.me"
+role :web, "markyoung.me"
+role :app, "markyoung.me"
+role :db, "markyoung.me"
 
 set :scm, "git"
 set :user, "mark"
