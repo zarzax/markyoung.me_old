@@ -87,25 +87,6 @@
 
 #content
 	+column(24, true)
-
-
-#project-index
-	.project
-		+column(24,true)
-		//:border 1px solid black
-		:margin-bottom 18px
-		:height 180px
-		.text
-			+column(10)
-			.name
-				:position relative
-				+prepend(1)
-			.summary	
-		.image
-			+column(9, true)
-			img
-				:width 360px
-				:height 180px
 			
 #project-listing
 	.stats
@@ -134,6 +115,70 @@
 			:text-align left
 			:font-size 1em
 			:letter-spacing 0.03em
+
+
+#project-nav
+	+column(4)
+	+rounded(6px)
+	:border 1px solid #585858
+	:background #D0D0D0
+	:margin-right 8px
+	#project-tags
+		:margin 10px
+		h3
+			:margin 1em 0 0.5em 0
+			
+#project-tagline
+	+column(20,true)
+	p
+		:padding 30px 20px 0 20px
+		:font-size 3em
+		
+			
+					
+#project-index
+	:margin-top 18px
+	.project
+		+column(12)
+		:margin-bottom 18px
+		:margin-right 5px
+		height= 10 * 18px
+		.name
+			+column(12,true)
+			:border-top 1px solid #585858
+			:border-bottom 1px solid #585858
+			h3
+				:padding 6px
+				:font-size 2em
+				:margin-bottom 0
+		.summary
+			+column(6)
+			ul.tags
+				+inline-list
+				li.tag
+					+rounded(8px)
+					:padding 3px
+					:background #D0D0D0
+			ul.languages
+				+inline-list
+				li.tag
+					+rounded(8px)
+					:padding 3px
+					:background #D0D0D0
+		.image
+			+column(5, true)
+			:padding-top 1em
+			img
+				:width 180px
+				:height 90px
+		
+
+
+
+
+
+
+			
 
 #tag-cloud
 	:text-align center

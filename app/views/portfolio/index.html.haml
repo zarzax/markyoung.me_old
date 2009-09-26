@@ -1,12 +1,39 @@
+#project-nav
+	#project-tags
+		- if @tags.empty?
+			%p No tags :/
+		- else
+			%h3 Tags: 
+			- @tags.each do |tag|
+				= link_to tag, :controller => "portfolio", :action => "tag", :id => tag.name
+
+		- if @languages.empty?
+			%p No tags :/
+		- else
+			%h3 Languages: 
+			- @languages.each do |tag|
+				= link_to tag, :controller => "portfolio", :action => "tag", :id => tag.name
+
+#project-tagline
+	%p Check out my projects.  These represent my professional, educational, and recreational experience.
+
+.section-horizontal-spacer
+					
 #project-index
 	- @projects.each do |project|
 		.project
-			.text
-				.name
-					%h3= h project.name
-				.summary= h project.summary
+			.name
+				%h3= h project.name
+			.summary
+				.text= h project.summary
+				%ul.tags
+					- project.tag_list.each do |tag|
+						%li.tag= tag
+				%ul.languages
+					- project.language_list.each do |tag|
+						%li.tag= tag
 			.image= image_tag(project.image_url)
 
-	#social
-		%h3 Projects Tag Cloud: 
-		= render :partial => 'tagcloud'
+/ #social
+/ 	%h3 Projects Tag Cloud: 
+/ 	= render :partial => 'tagcloud'
