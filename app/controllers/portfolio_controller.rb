@@ -1,8 +1,12 @@
 class PortfolioController < ApplicationController
   
   def index
-    @projects = Project.find_projects
+    # @search = Project.search(params[:search])
+    # @projects = @search.all
+    @projects = Project.name_like_all(params[:search].to_s.split).ascend_by_name 
+    
     load_tag_vars
+    
   end
   
   def list

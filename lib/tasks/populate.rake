@@ -1,6 +1,9 @@
-class AddTestData < ActiveRecord::Migration
-  def self.up
-    Project.delete_all
+namespace :db do
+  desc "Erase and Populate Database"
+  task :populate => :environment do
+
+    [Project].each(&:delete_all)
+    
     Project.create(
       :name => 'Website Redesign - nagios.org',
       :summary =>
@@ -137,9 +140,6 @@ class AddTestData < ActiveRecord::Migration
       :tag_list => "Minty",
       :link_url => 'http://www.mint.com'
     )
-  end
-
-  def self.down
-    Project.delete_all
+  
   end
 end

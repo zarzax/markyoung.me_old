@@ -14,10 +14,16 @@
 			- @languages.each do |tag|
 				= link_to tag, :controller => "portfolio", :action => "tag", :id => tag.name
 
+		- form_tag '/portfolio', :method => 'get' do
+			%p
+				= text_field_tag :search, params[:search]
+				= submit_tag "Search", :name => nil
+
 #project-tagline
 	%p Check out my projects.  These represent my professional, educational, and recreational experience.
 
 .section-horizontal-spacer
+
 					
 #project-index
 	- @projects.each do |project|
