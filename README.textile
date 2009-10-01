@@ -1,0 +1,51 @@
+== README; http://www.MarkYoung.me
+
+This is the personal portfolio of me, Mark Young.  I am releasing the software under the MIT Open Source License so that others may use, modify, and give me pointers on how 
+
+
+== Getting Started
+
+1. Install on server using either git or Capistrano.  You may want to edit config/deploy.db to suit your needs
+2. Edit the config/database.yml to suit your needs.  It defaults to SQLite.
+3. run 'rake db:migrate'
+4. Edit lib/tasks/poplulate.rake with your own data.
+5. Populate database by 'rake db:populate'.
+6. run 'ruby script/server'
+
+== Gems Needed
+
+1. chriseppstein-compass
+2. RedCloth
+
+== Vendor Plugins Used
+
+1. acts-as-taggable-on
+2. acts_as_tree
+3. haml
+4. irs_process_scripts
+5. less-for-rails
+6. searchlogic
+
+== License
+
+The MIT License
+
+Copyright (c) 2009 Mark Young
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

@@ -4,82 +4,106 @@ namespace :db do
 
     [Project].each(&:delete_all)
     
+    # t.string :name
+    # t.text :summary
+    # t.text :description
+    # t.string :link_url
+    # t.string :image_url
+    # t.boolean :is_featured
+    # t.string :githubbed
+    # t.string :permalink
+    
     Project.create(
-      :name => 'Website Redesign - nagios.org',
+      :name => "MarkYoung.me Portfolio Site",
       :summary =>
         %{
-          A joomla conversion and theme creation for nagios.org.
+          My portfolio site written in Ruby on RAILS, MySQL, jQuery, CSS to showcases my personal and commercial work.
         },
       :description =>
         %{
-          A 3-week project consisting of concept to implementation.
-          Used photoshop for the initial conception and coverted
-          into a joomla theme.
+          <p>My personal portfolio is an ongoing project to showcase examples of my work.  It is written in Ruby on Rails, jQuery, haml and utilizing Blueprint CSS through the Compass CSS framework.</p>
         },
-      :tag_list => "Joomla, Graphic Design, CMS",
-      :language_list => 'PHP, CSS, XHTML',
-      :image_url => '/images/default.jpg',
-      :link_url => 'http://www.nagios.org',
+      :tag_list => "Personal, CMS, Open Source",
+      :language_list => "RAILS, MySQL, jQuery, HAML, CSS, XHTML",
+      :image_url => "/images/default.jpg",
+      :link_url => "http://www.markyoung.me",
+      :githubbed => "http://github.com/zarzax/markyoung.me",
       :is_featured => true
     )
     
     Project.create(
-      :name => 'Created a Open Source Community - community.nagios.org',
+      :name => "Nagios Community Blog and Wiki",
       :summary =>
         %{
-          Created a community site for the Nagios worldwide user and developer
-          community. 
+          Conceptualized and created the first official community site for 
+          the Nagios worldwide user and developer community with Nagios founder. 
         },
       :description =>
         %{
+          <p>
           This was a project that was molded over a time while I was working
           for Nagios Enterprises, LLC and Ayamon, LLC.  The idea was to bring
           the community together in one place and share the collective 
-          enthusiasim and talent.  This was a combination blog and wiki.  
+          enthusiasm and talent.  This was a combination blog and wiki.  
           The software used was Wordpress for the blog and Mediawiki for the
           wiki software.  Custom themes were developed for both sites.  Graphics
           and color schemes tied the community sites with the general nagios 
           project.
+          </p>
+          <p>
+          community.nagios.org and wiki.nagios.org have since been redesigned 
+          again as part of a larger rebranding of all nagios websites.
+          </p>
         },
       :tag_list => "Wordpress, Mediawiki, Graphic Design, CMS",
-      :language_list => "PHP, CSS, XHTML",
-      :image_url => '/images/default.jpg',
-      :link_url => 'http://community.nagios.org',
-      :is_featured => true
+      :language_list => "PHP, jQuery, CSS, XHTML",
+      :image_url => "/images/default.jpg",
+      :link_url => "http://community.nagios.org"
     )
     
     Project.create(
-      :name => 'Dolor Account Program',
+      :name => "Nagios Web Branding",
       :summary =>
         %{
-          Created the Dolor accounting program as a class project.
+          Conceptualized the redesign of over 8 Nagios web properties in a way to 
+          emphasize their relationships with each other.  Relationships were
+          established with graphical elements and colors.  Consistancy was 
+          maintained through multiple software systems.
         },
       :description =>
         %{
-          This projects original intention was to exhastivly practice 
-          OO programming in C++ and work with xml and 
-          other formatted text-based datastructures.  I use this design
-          over and over again as base for learning any new language.  I
-          have implemented it in C++, PHP, Ruby, and Ruby on Rails. 
+          <p>
+          The last design update for the Nagios project had been in 2003 and had
+          changed little.  It was time to bring consistency and usability to 
+          the forefront.  Using my experience in usability research and 
+          web standards I was able to sketch designs that I later turned to 
+          photoshop templates.
+          </p>
+          <p>
+          Relationships were established with graphical elements and colors.  
+          Consistancy in style was maintained through all sites, software, 
+          and CMS
+          </p>
         },
-      :tag_list => "Application, Class Project",
-      :language_list => "C++, PHP, Ruby, RoR, XML",
-      :image_url => '/images/default.jpg',
-      :link_url => 'http://github.com/zarzax/dolor-original/tree/master',
-      :githubbed => 'http://github.com/zarzax/dolor-original/tree/master',
-      :is_featured => true
+      :tag_list => "Commercial, Photoshop, Wordpress, Mediawiki, Joomla, Drupal, CMS",
+      :language_list => "PHP, CSS, XHTML",
+      :image_url => "/images/default.jpg",
+      :link_url => "http://www.nagios.org"
     )
 
     Project.create(
-      :name => 'Redesign UMN registration system',
+      :name => "UMN Class Registration System",
       :summary =>
         %{
-          This was a graduate project on usablilty and redesign
-          an existing system.
+          This was a graduate school research project on human computer interaction and
+          usability.  The UMN class registration system is an example of bad design.  I
+          studied using user visits and paper prototyping before prototyping a new single
+          page replacement.
         },
       :description =>
         %{
-          The University of Minnesota's class search and registration system
+          <p>
+          The University of Minnesota"s class search and registration system
           is both confusing and time consuming.  The simple process of finding
           one class goes through 3 separate search pages and 1 registration page
           as well as pen and paper to figure out if class times are overlapping.
@@ -88,57 +112,68 @@ namespace :db do
           a process of implementations and user testings.  The result was a
           simple one-page web solution to search classes and drill down and
           print the schedule.
+          </p>
         },
-      :tag_list => "Application, Class Project, Web, HCI",
+      :tag_list => "Application, Class Project, Usability",
       :language_list => "PHP, Javascript, XHTML, UML",
-      :image_url => '/images/default.jpg',
-      :link_url => 'http://github.com/zarzax/umn-classfinder/tree/master',
-      :githubbed => 'http://github.com/zarzax/umn-classfinder/tree/master',
+      :image_url => "/images/default.jpg",
+      :link_url => "http://github.com/zarzax/umn-classfinder/tree/master",
+      :githubbed => "http://github.com/zarzax/umn-classfinder/tree/master",
       :is_featured => true
     )
         
     Project.create(
-      :name => 'Started Microsoft Corp',
+      :name => "Dolor Accounting Software",
       :summary =>
         %{
-          In the summer of 1979 I decided I needed to
-          start a company that sells software.  So without
-          delay I wrote MSDOS and have never looked back.
-          Billions of dollars later here I am..
+          Dolor (spanish for dollar) was my undergraduate senior project.  
+          It is a object orientated accounting program accepting many 
+          books of accounts, accounts, and transactions as well as basic
+          trending.  First implemented in C++ with CLI, I have since 
+          replicated the project in many different languages as a way
+          to learn new languages.
         },
       :description =>
         %{
-          In the summer of 1979 I decided I needed to
-          start a company that sells software.  So without
-          delay I wrote MSDOS and have never looked back.
-          Billions of dollars later here I am..
+          <p>
+          This is a multi-ledger accounting software which at its base
+          runs on linux and has a console user interface.  This was 
+          extended during the class to use CGI interface and to have 
+          an custom XML data backend.
+          </p>
+          <p>
+          The implementation I have on GitHub is from about 50% project
+          completion.  I have lost the original SVN repository that had
+          my completed Project.
+          </p>
         },
-      :image_url => '/images/default.jpg',
-      :tag_list => "Money",
-      :link_url => "http://www.microsoft.com"
+      :image_url => "/images/default.jpg",
+      :tag_list => "Application, Personal, Class Project, Unix",
+      :language_list => "C/C++, RAILS, Ruby, XHTML, CSS",
+      :link_url => "http://github.com/zarzax/dolor-original",
+      :githubbed => "http://github.com/zarzax/dolor-original"
     )
     
     Project.create(
-      :name => 'Invented the Breath Mint',
+      :name => "File Transfer server and client in TCP and UDP",
       :summary =>
         %{
-          One day I found that I had a solution for the
-          age old problem of bad breath.  Why not cover
-          it up with the an extract of the Mint leaf. 
-          The Mint leaf was only used in mojitos prior 
-          to my invention.
+          This was a graduate research project in TCP networking. I
+          implemented a forking TCP client/server program that 
+          transfers a file using a custom protocol over UDP and
+          implements a Sliding Window Protocol size of 1.
         },
       :description =>
         %{
-          One day I found that I had a solution for the
-          age old problem of bad breath.  Why not cover
-          it up with the an extract of the Mint leaf. 
-          The Mint leaf was only used in mojitos prior 
-          to my invention.
+          <p>
+          This was an accelerated summer class in low level networking.
+          </p>
         },
-      :image_url => '/images/default.jpg',
-      :tag_list => "Minty",
-      :link_url => 'http://www.mint.com'
+      :image_url => "/images/default.jpg",
+      :tag_list => "Application, Class Project, Unix",
+      :language_list => "C/C++, TCP/IP",
+      :link_url => "http://github.com/zarzax/tcp-udp-ftp",
+      :githubbed => "http://github.com/zarzax/tcp-udp-ftp"
     )
   
   end
